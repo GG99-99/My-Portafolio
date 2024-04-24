@@ -14,7 +14,7 @@
 .scroll-guide-cont::after{
     content: "";
     height: 2px;
-    width: 70%;
+    width: 58%;
     background-color: #ffff;
     position: absolute;
     z-index: 100;

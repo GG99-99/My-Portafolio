@@ -10,14 +10,25 @@ const article1 = document.querySelector(".edu-cont");
 scrollGuide[0].innerHTML = innerCircleGuide
 scrollGuide[0].classList.add("scale1")
 
+let i;
 
-/*
-function circleAndScale(i){
-    for (id in scrollGuide){
-          
+function circleAndScale(i, list){
+    for (let id in list){
+        if (id == i){
+            list[id].classList.add("scale1");
+            list[id].innerHTML = innerCircleGuide;
+            return
+        }
     }
 }
-*/
+
+function removeCircleScale(e1, e2, list){
+    list[e1].classList.remove("scale1");
+    list[e1].innerHTML ="";
+
+    list[e2].classList.remove("scale1");
+    list[e2].innerHTML ="";
+}
 
 
 
@@ -32,11 +43,8 @@ function () {    // esta es la funcion que toma los top del header, article ...
     
     /* --- circle 1  --- */
     if (headerTop  < windowHeight){
-        scrollGuide[0].innerHTML = innerCircleGuide
-        scrollGuide[0].classList.add("scale1")
-
-        scrollGuide[1].innerHTML = ""
-        scrollGuide[1].classList.remove("scale1")
+        circleAndScale(0, scrollGuide)
+        removeCircleScale(1,2,scrollGuide)
     }
     /* --- circle 1  end --- */
 
@@ -44,27 +52,16 @@ function () {    // esta es la funcion que toma los top del header, article ...
     /* --- circle 2 --- */
 
     if (aboutContTop < windowHeight){
-        scrollGuide[1].innerHTML = innerCircleGuide
-        scrollGuide[1].classList.add("scale1")
-
-
-        scrollGuide[0].innerHTML = ""
-        scrollGuide[2].innerHTML = ""
-
-        scrollGuide[0].classList.remove("scale1")
-        scrollGuide[2].classList.remove("scale1")
+        circleAndScale(1, scrollGuide)
+        removeCircleScale(0,2,scrollGuide)
     }
     /* --- circle 2  end --- */
 
 
     /* --- circle 3 --- */
     if (article1Top < windowHeight){
-        scrollGuide[2].innerHTML = innerCircleGuide
-        scrollGuide[2].classList.add("scale1")
-
-
-        scrollGuide[1].innerHTML = ""
-        scrollGuide[1].classList.remove("scale1")
+        circleAndScale(2, scrollGuide)
+        removeCircleScale(0,1,scrollGuide)
         
 
     
