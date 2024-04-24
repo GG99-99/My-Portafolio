@@ -1,0 +1,107 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portafolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    
+
+</head>
+<body>
+    <div class="scroll-guide-cont">
+        <div class="scroll-guide-cont__scroll-guide"></div>
+        <div class="scroll-guide-cont__scroll-guide"></div>
+        <div class="scroll-guide-cont__scroll-guide"></div>
+    </div>
+
+    <header>
+
+        <section class="section-hero">
+        <nav class="navbar" >
+            <div class="navbar__hero-container">
+                <div class="navbar__hero-container__h1-cont" >
+                    <h1 class="navbar__hero-container__h1-cont__h1">¡BIENVENIDO A MI PORTAFOLIO!</h1>                   
+                </div>
+                <div class="navbar__hero-container__p-cont">
+                    <p class="navbar__hero-container__p-cont__p">Hey, Soy Jeremy espero que te agrade mi portafolio</p>
+                </div>
+            </div>
+
+            <div class="navbar__ul-container">
+                <ul class="navbar__ul-container__ul">
+                    <li class="navbar__ul-container__ul__li"> <span class="navbar__ul-container__ul__li__span-line"></span> Home</li>
+                    <li class="navbar__ul-container__ul__li"><span class="navbar__ul-container__ul__li__span-line"></span> About</li>
+                    <li class="navbar__ul-container__ul__li"><span class="navbar__ul-container__ul__li__span-line"></span> contactame</li>
+                </ul>
+            </div>
+        </nav>
+        </section>
+
+    </header>
+
+{% block content %}
+    <section >
+
+         <article class="about-cont">
+
+            <div class="h3-cont" >
+
+                <img src="{{url_for('static', filename='icons/contact-icon.svg')}}" alt="" class="h3-cont__icon" id="h3-icon-contact">  
+                
+                
+                <h3 class="h3-cont__h3"> SOBRE MI</h3>
+
+            </div>
+
+         </article> 
+
+    </section>
+
+
+    <article class="edu-cont">
+            <div class="h3-cont" >
+
+                <img src="{{url_for('static', filename='icons/study-icon.svg')}}" alt="" class="h3-cont__icon">
+                <h3 class="h3-cont__h3"> EDUCACION</h3>
+
+            </div>
+
+            <div class="edu-cont__card-cont">
+                <div class="edu-cont__card-cont__card">
+                    <h3 class="edu-cont__card-cont__card__h3">Universidad Intec</h3>
+
+                    <div class="edu-cont__card-cont__card__span-cont">
+                        <span>Ingeniero en Software</span>
+                        <span>2024 - 2027 </span>
+
+                    </div>
+                    
+
+                </div>
+                <div class="edu-cont__card-cont__card">
+                    <h3 class="edu-cont__card-cont__card__h3">Colegio evangelico Sinai</h3>
+
+                    <div class="edu-cont__card-cont__card__span-cont">
+                        <span>Graduado de Bachiller</span>
+                        <span>2023</span>
+
+                    </div>
+                    
+                </div>
+                <!-- <div class="edu-cont__card-cont__card">box 3</div> -->
+            </div>
+
+    </article>
+
+{% endblock %}
+
+   
+</body>
+<script src="{{url_for('static', filename='js/main.js')}}"></script>
+<script src="{{url_for('static', filename='js/scroll-guide.js')}}"></script>
+</html>

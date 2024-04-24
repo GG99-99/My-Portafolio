@@ -1,0 +1,49 @@
+.scroll-guide-cont{
+    display: flex;
+    justify-content: space-evenly;
+    width: 40vw;
+    height: 40px;
+    position: fixed;
+    align-items: center;
+    left: 30vw;
+    top: 15px;
+    
+    
+}
+
+.scroll-guide-cont::after{
+    content: "";
+    height: 2px;
+    width: 70%;
+    background-color: #ffff;
+    position: absolute;
+    z-index: 100;
+    
+}
+
+.scroll-guide-cont__scroll-guide{
+    height: 35px;
+    width: 35px;
+    border: solid #ffff 2px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    text-align: center;
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.scroll-guide-cont__scroll-guide__circle{
+    height: 25px;
+    width: 25px;
+    border: solid #ffff 3px;
+    border-radius: 50%;
+}
+
+.scale1{
+    transform: scale(1.25);
+    transition: transform 0.5s;
+}

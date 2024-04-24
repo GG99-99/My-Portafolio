@@ -1,0 +1,68 @@
+/* ----- article container -----*/
+.edu-cont{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+
+
+/* ----- article container end -----*/
+
+/* ----- h3 container -----*/
+
+
+
+.h3-cont{
+    display: flex;
+    justify-content: center;
+}
+
+.h3-cont__icon{
+    width: 35px;
+    height: 35px;
+    fill: #ffff;
+}
+
+.h3-cont__h3{
+    transform: translateY(11%);
+
+    
+}
+
+/* ----- h3 container end -----*/
+
+
+
+
+/* ----- card container -----*/
+.edu-cont__card-cont{
+    display: flex;
+    justify-content: center;
+    height: 85%;
+    column-gap: 20px;
+    flex-wrap: wrap;
+
+}
+
+.edu-cont__card-cont__card{  /*the display flex is more down with the span-cont*/
+    width: 250px;
+    background: #fafafa10;
+    backdrop-filter: blur(2px);
+    border-radius: 7px;
+    height: 150px;
+    justify-content: center;
+}
+
+.edu-cont__card-cont__card__h3{
+    font-size: 16px;
+}
+
+.edu-cont__card-cont__card__span-cont, .edu-cont__card-cont__card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ----- card container end -----*/
