@@ -1,32 +1,32 @@
+.scroll-guide_grand-father-cont{
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    z-index: 5000;
+    top: 0;
+    transition: top 0.4s ease;
+}
+
 .scroll-guide-cont{
     display: flex;
     justify-content: space-evenly;
-    width: 40vw;
-    height: 40px;
-    position: fixed;
+    width: 170px;
+    height: 43px;
     align-items: center;
-    left: 30vw;
-    top: 15px;
+    background-color: rgb(15, 15, 15, 0.6);
+    border-radius: var(--border-radius-common);
+    box-shadow: 0 0 3.5px rgba(200, 200, 200, 0.7);
     
     
 }
 
-.scroll-guide-cont::after{
-    content: "";
-    height: 2px;
-    width: 58%;
-    background-color: #ffff;
-    position: absolute;
-    z-index: 100;
-    
-}
 
 .scroll-guide-cont__scroll-guide{
     height: 35px;
     width: 35px;
-    border: solid #ffff 2px;
     border-radius: 50%;
-    background-color: var(--primary-color);
     text-align: center;
     z-index: 200;
     display: flex;
@@ -37,13 +37,18 @@
 
 
 .scroll-guide-cont__scroll-guide__circle{
-    height: 25px;
-    width: 25px;
-    border: solid #ffff 3px;
+    height: 20px;
+    width: 20px;
+    border: solid #ffffff70 3px;
     border-radius: 50%;
 }
 
 .scale1{
-    transform: scale(1.25);
+    transform: scale(1.45);
+    border: solid #ffff 3px;
     transition: transform 0.5s;
+}
+
+.about, .educacion{
+    scroll-margin-top: 9ex;
 }

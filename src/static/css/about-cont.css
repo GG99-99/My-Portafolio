@@ -1,11 +1,287 @@
 .about-cont{
     width: 100%;
-    height: 50vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     row-gap: 25px;
+    align-items: center;
+   
+    
 }
 
 #h3-icon-contact{
     transform: translateY(-4px);
 }
+
+.about-cont-grid_cont{
+    width: 95%;
+    display: grid;
+    grid-template-areas: 
+    "A"
+    "B";
+    grid-template-columns: minmax(300px, auto);
+    grid-template-rows: repeat(2, auto);
+    row-gap: 20px;
+}
+
+.about-text_container{
+    width: 100%;
+    height: auto;
+    background-color: var(--card-color);
+    border-radius: var(--border-radius-common);
+    grid-area: A;
+    box-shadow: var(--card-box-shadow);
+}
+
+.about-text-sub_container{
+    padding: 1rem;
+}
+
+
+/* --------------------------------- Ability container --------------------------------- */
+
+
+.about-abilitys_cont{
+     /*general ability container, this is the cont that have assigned the area B*/
+     grid-area: B;
+     display: grid;
+     gap: 10px;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     grid-template-rows: repeat(auto-fit, minmax(315px, 315px));
+}
+
+.about-code_ability-cont, .about-language_cont, .language-description, .about_contact-info{  
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: var(--card-color);
+    padding: 0.8rem;
+    border-radius: var(--border-radius-common);
+    min-width: 300px;
+    box-shadow: var(--card-box-shadow);
+}
+
+.about-code_ability-cont{
+    justify-content: space-around;
+}
+
+
+.about-general-language-cont{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    gap: 10px;
+}
+
+
+.about-code_ability-cont-span, .circle-span{
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);   
+}
+
+
+
+.about-code_ability-cont_bars{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    
+}
+
+.code-ability_bars{  
+    /* this is the bar wich represent my knowloged about lenguage */
+    width: 100%;
+    height: 1rem;
+    background-color:var(--primary-color);
+    border-radius: 3px;
+    margin-top: 4px;
+    position: relative;
+}
+
+
+/*------------------------ bar of language of programation ------------------------*/
+
+.JS-bar::before, .CSS-bar::before, .HTML-bar::before, .Cisco-bar::before, .py-bar::before{
+    content: " ";
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    height: 100%;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.JS-bar::before{
+    width: 60%;
+}
+
+.CSS-bar::before{
+    width: 65%;
+}
+
+.HTML-bar::before{
+    width: 70%;
+}
+
+.Cisco-bar::before{
+    width: 40%;
+}
+
+.py-bar::before{
+    width: 50%;
+}
+
+
+/* ---------------------------- language container -----------------------------*/
+
+.about-language_cont{
+    /* his basic style is with the .about-code_ability-cont littel more top */
+    height: min-content;
+    
+}
+
+
+.span-cont{   /*----------------- span with shadows -----------------*/
+    width: 100%;
+    text-align: center;
+}
+
+.span-cont_span{ /*----------------- span with shadows -----------------*/
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+
+.about-language_circles-cont{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.language_circles{
+    /*this is the div wich contain the svg*/
+    
+
+    border-radius: 50%;
+    
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+/* ------------------------ Circle bar STYLES ------------------------ */
+
+
+.circular-progress { 
+    /* is the svg */
+    --size: 250px;
+    --half-size: calc(var(--size) / 2);
+    --stroke-width: 27px;
+    --radius: calc((var(--size) - var(--stroke-width)) / 2);
+    --circumference: calc(var(--radius) * pi * 2);
+    --dash: calc((var(--progress) * var(--circumference)) / 100);
+}
+  
+.circular-progress circle {
+    cx: var(--half-size);
+    cy: var(--half-size);
+    r: var(--radius);
+    stroke-width: var(--stroke-width);
+    fill: none;
+    stroke-linecap: round;
+}
+    
+.circular-progress circle.fg {
+    transform-origin: var(--half-size) var(--half-size);
+    stroke-dasharray: var(--dash) calc(var(--circumference) - var(--dash));
+    transition: stroke-dasharray 0.1s linear 0s;
+    stroke: rgba(255, 255, 255, 0.8);
+    filter: drop-shadow(1px 1px 2px #888);
+  }
+
+.spanish-circle{
+    animation: progress-animation1  linear 0s 1 forwards;
+  }
+
+.english-circle{
+    animation: progress-animation2  linear 0s 1 forwards;
+  }
+.inglish-fg{
+    transform: rotate(90deg);
+}
+
+
+.circle-span{
+    position: absolute;
+    text-align: center;
+}
+  
+@property --progress {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+  }
+  
+@keyframes progress-animation1 {
+    from {--progress: 0;}
+    to {--progress: 100;}
+  }
+ 
+@keyframes progress-animation2 {
+    from {--progress: 0;}
+    to {--progress: 65;}
+  }
+
+
+
+
+  /* ------------------------------- language description -------------------------------- */
+
+  .language-description{
+
+  }
+
+  .language-description-text{
+    width: 300px;
+    text-align: center;
+  }
+
+
+  /*------------------------------- Extra info container -------------------------------*/
+
+  .about_contact-info{
+    height: max-content;
+  }
+
+.contact_card-cont{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+.contact-cards{
+    display: flex;
+    gap: 15px;
+}
+
+.contact-icon_cont{
+    border-radius: var(--border-radius-common);
+    box-shadow: var(--card-box-shadow);
+    width: fit-content;
+    padding: 3px;
+    
+}
+
+.contact-icon{
+    height: 40px;
+    width: 40px;
+    
+}
+

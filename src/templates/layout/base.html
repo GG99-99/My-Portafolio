@@ -13,16 +13,24 @@
 
 </head>
 <body>
-    <div class="scroll-guide-cont">
-        <div class="scroll-guide-cont__scroll-guide"></div>
-        <div class="scroll-guide-cont__scroll-guide"></div>
-        <div class="scroll-guide-cont__scroll-guide"></div>
+    <div id="top-init"></div>
+
+    <div class="scroll-guide_grand-father-cont">
+        <div class="scroll-guide-cont">
+                <a  href="#top-init" class="scroll-guide-cont__scroll-guide"><div class="scroll-guide-cont__scroll-guide__circle"></div></a>
+
+                <a  href="#about" class="scroll-guide-cont__scroll-guide"><div class="scroll-guide-cont__scroll-guide__circle"></div></a>
+
+                <a href="#educacion" class="scroll-guide-cont__scroll-guide"><div class="scroll-guide-cont__scroll-guide__circle"></div></a>
+                       
+        </div>
     </div>
+    
 
     <header>
 
         <section class="section-hero">
-        <nav class="navbar" >
+            <nav class="navbar" >
             <div class="navbar__hero-container">
                 <div class="navbar__hero-container__h1-cont" >
                     <h1 class="navbar__hero-container__h1-cont__h1">¡BIENVENIDO A MI PORTAFOLIO!</h1>                   
@@ -34,22 +42,22 @@
 
             <div class="navbar__ul-container">
                 <ul class="navbar__ul-container__ul">
-                    <li class="navbar__ul-container__ul__li"> <span class="navbar__ul-container__ul__li__span-line"></span> Home</li>
-                    <li class="navbar__ul-container__ul__li"><span class="navbar__ul-container__ul__li__span-line"></span> About</li>
-                    <li class="navbar__ul-container__ul__li"><span class="navbar__ul-container__ul__li__span-line"></span> contactame</li>
+                    <li class="navbar__ul-container__ul__li"><span class="navbar__ul-container__ul__li__span-line"></span> <a href="#about">Sobre Mi</a></li>
+                    <li class="navbar__ul-container__ul__li"><span class="navbar__ul-container__ul__li__span-line"></span> <a href="#educacion">Educación</a></li>
                 </ul>
             </div>
-        </nav>
+
+            </nav>
         </section>
 
     </header>
 
 {% block content %}
-    <section >
+    <section class="about" id="about">
 
          <article class="about-cont">
 
-            <div class="h3-cont" >
+            <div class="h3-cont"  >
 
                 <img src="{{url_for('static', filename='icons/contact-icon.svg')}}" alt="" class="h3-cont__icon" id="h3-icon-contact">  
                 
@@ -58,45 +66,217 @@
 
             </div>
 
+            <div class="about-cont-grid_cont">
+                <div class="about-text_container">
+                    <div class="about-text-sub_container">
+                        <p class="about-text">Soy Jeremy Rafael, naci en Republica Dominicana, Actualmente estoy estudiando la carrera de ingenieria en Software en la Universidad Intec. tengo conocimientos de lenguajes de programacion como JavaScript y Python, ademas de HTML y CSS.</p>
+                    </div>
+    
+                </div>
+
+                <div class="about-abilitys_cont">
+                    <div class="about-code_ability-cont">
+
+
+                        <div class="about-code_ability-cont-span">
+                            <span class="about-code_ability-cont-span_span">Lenguajes de programacion</span>
+                        </div>
+
+                        <div class="about-code_ability-cont_bars">
+
+                            <div class="sub-cont_bars">
+                                <span>JavaScript</span>
+                                <div class="code-ability_bars JS-bar"></div>
+                            </div>
+                            
+                            <div class="sub-cont_bars">
+                                <span>CSS</span>
+                                <div class="code-ability_bars CSS-bar"></div>
+                            </div>
+
+                            <div class="sub-cont_bars">
+                                <span>HTML</span>
+                                <div class="code-ability_bars HTML-bar"></div>
+                            </div>
+
+                            <div class="sub-cont_bars">
+                                <span>Cisco CLI</span>
+                                <div class="code-ability_bars Cisco-bar"></div>
+                            </div>
+
+                            <div class="sub-cont_bars">
+                                <span>Python</span>
+                                <div class="code-ability_bars Py-bar"></div>
+                            </div>
+
+                            
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="about-general-language-cont">
+                        <div class="about-language_cont">
+                            <div class="span-cont">
+                                <span class="span-cont_span">Idiomas</span>
+                            </div>
+                            <div class="about-language_circles-cont">
+                                <div class="language_circles ">
+                                    <svg width="120" height="120" viewBox="0 0 250 250" class="circular-progress spanish-circle">
+                                        <circle class="fg spanish-fg"></circle>
+                                    </svg>
+    
+                                    <span class="circle-span">Español<br>100%</span>
+                                </div>
+    
+    
+                                <div class="language_circles ">
+                                    <svg width="120" height="120" viewBox="0 0 250 250" class="circular-progress english-circle">
+                                        <circle class="fg inglish-fg"></circle>
+                                    </svg>
+    
+                                    <span class="circle-span">Ingles<br>55%</span>
+                                </div>
+    
+                            </div>
+                        </div>
+
+                        <div class="language-description">
+                            <div class="span-cont">
+                                <span class="span-cont_span">Dato</span>
+                            </div>
+
+                            <div class="language-description_text">
+                                <p class="description-text">Estudie en un instituto de ingles por un año, lo deje y segui estudiando ingles por mi propia cuenta</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about_contact-info">
+                        <div class="span-cont">
+                            <span class="span-cont_span">Contacto</span>
+                        </div>
+
+                        <div class="contact_card-cont">
+
+                            <div class="contact-cards">
+                                <div class="contact-icon_cont">
+                                    <img src="{{url_for('static', filename='icons/phone-icon.svg')}}" alt="" class="contact-icon">
+                                </div>
+
+                                <div class="contact-infos-cont">
+                                    <span class="contact-info"><b>Numero telefonico</b> <br>1 (829) - 903 - 2571</span>
+                                </div>
+
+
+                            </div>
+
+                            <div class="contact-cards">
+                                <div class="contact-icon_cont">
+                                    <img src="{{url_for('static', filename='icons/mail-icon.svg')}}" alt="" class="contact-icon">
+                                </div>
+
+                                <div class="contact-infos-cont">
+                                    <span class="contact-info"><b>Correo Electronico</b> <br>Jeremy0titan@gmail.com</span>
+                                </div>
+
+                            </div>
+
+                            <div class="contact-cards">
+                                <div class="contact-icon_cont">
+                                    <img src="{{url_for('static', filename='icons/instagram-icon.svg')}}" alt="" class="contact-icon">
+                                </div>
+
+                                <div class="contact-infos-cont">
+                                    <span class="contact-info"><b>instagram</b> <br>@jrga_101</span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+            
+
          </article> 
 
     </section>
 
+    <section class="educacion" id="educacion">
+        <article class="edu-cont">
+        <div class="h3-cont" >
 
-    <article class="edu-cont">
-            <div class="h3-cont" >
+            <img src="{{url_for('static', filename='icons/study-icon.svg')}}" alt="" class="h3-cont__icon">
+            <h3 class="h3-cont__h3"> EDUCACIÓN</h3>
 
-                <img src="{{url_for('static', filename='icons/study-icon.svg')}}" alt="" class="h3-cont__icon">
-                <h3 class="h3-cont__h3"> EDUCACION</h3>
+        </div>
+
+        <div class="edu-cont__card-cont">
+            <div class="edu-cont__card-cont__card">
+                <h3 class="edu-cont__card-cont__card__h3">Universidad Intec</h3>
+
+                <div class="edu-cont__card-cont__card__span-cont">
+                    <span>Ingeniero en Software</span>
+                    <span>2024 - 2027 </span>
+
+                </div>
 
             </div>
 
-            <div class="edu-cont__card-cont">
-                <div class="edu-cont__card-cont__card">
-                    <h3 class="edu-cont__card-cont__card__h3">Universidad Intec</h3>
+            <div class="edu-cont__card-cont__card">
+                <h3 class="edu-cont__card-cont__card__h3">ITLA</h3>
 
-                    <div class="edu-cont__card-cont__card__span-cont">
-                        <span>Ingeniero en Software</span>
-                        <span>2024 - 2027 </span>
-
-                    </div>
-                    
+                <div class="edu-cont__card-cont__card__span-cont">
+                    <span>Cisco CCNA 1</span>
+                    <span>2024</span>
 
                 </div>
-                <div class="edu-cont__card-cont__card">
-                    <h3 class="edu-cont__card-cont__card__h3">Colegio evangelico Sinai</h3>
-
-                    <div class="edu-cont__card-cont__card__span-cont">
-                        <span>Graduado de Bachiller</span>
-                        <span>2023</span>
-
-                    </div>
-                    
-                </div>
-                <!-- <div class="edu-cont__card-cont__card">box 3</div> -->
             </div>
 
-    </article>
+            <div class="edu-cont__card-cont__card">
+                <h3 class="edu-cont__card-cont__card__h3">ITLA</h3>
+
+                <div class="edu-cont__card-cont__card__span-cont">
+                    <span>Cisco CCNA 2</span>
+                    <span>2024</span>
+
+                </div>
+            </div>
+
+            <div class="edu-cont__card-cont__card">
+                <h3 class="edu-cont__card-cont__card__h3">Infoted</h3>
+
+                <div class="edu-cont__card-cont__card__span-cont">
+                    <span>Diseño de paginas web (CSS y JavaScript)</span>
+                    <span>2024</span>
+
+                </div>
+                
+            </div>
+
+
+
+            <div class="edu-cont__card-cont__card">
+                <h3 class="edu-cont__card-cont__card__h3">Colegio evangelico <br> Sinai</h3>
+
+                <div class="edu-cont__card-cont__card__span-cont">
+                    <span>Graduado de Bachiller</span>
+                    <span>2023</span>
+
+                </div>
+                
+            </div>
+        </div>
+
+
+            
+        </div>
+        </article>
+    </section>
+    
 
 {% endblock %}
 
