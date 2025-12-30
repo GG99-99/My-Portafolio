@@ -13,10 +13,9 @@
     display: flex;
     justify-content: center;
     height: minmax(200px);
-    column-gap: 40px;
     flex-wrap: wrap;
     align-content: flex-start;
-    row-gap: 40px;
+    gap: 3vh;
 }
 
 .card{  /*the display flex is more down with the span-cont*/
