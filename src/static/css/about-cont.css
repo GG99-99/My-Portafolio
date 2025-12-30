@@ -1,9 +1,9 @@
-.about-cont{
+.about{
     width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    row-gap: 25px;
+    row-gap: 6vh;
     align-items: center;
    
     
@@ -13,29 +13,17 @@
     transform: translateY(-4px);
 }
 
-.about-cont-grid_cont{
-    width: 95%;
-    display: grid;
-    grid-template-areas: 
-    "A"
-    "B";
-    grid-template-columns: minmax(300px, auto);
-    grid-template-rows: repeat(2, auto);
-    row-gap: 20px;
+.about_cont{
+    width: 62%;
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 3vh;
 }
 
-.about-text_container{
-    width: 100%;
-    height: auto;
-    background-color: var(--card-color);
-    border-radius: var(--border-radius-common);
-    grid-area: A;
-    box-shadow: var(--card-box-shadow);
-}
 
-.about-text-sub_container{
-    padding: 1rem;
-}
+
+
 
 
 /* --------------------------------- Ability container --------------------------------- */
@@ -43,44 +31,55 @@
 
 .about-abilitys_cont{
      /*general ability container, this is the cont that have assigned the area B*/
-     grid-area: B;
-     display: grid;
-     gap: 10px;
-     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-     grid-template-rows: repeat(auto-fit, minmax(315px, 315px));
+    
+    display: flex;
+    height: auto;
+    flex-wrap: wrap;
+    gap: 2vh;
+    align-items: center;
+    justify-content: center;
 }
 
-.about-code_ability-cont, .about-language_cont, .language-description, .about_contact-info{  
+.code-skills, .about-language_cont, .language-description, .contact-box{  
     display: flex;
     flex-direction: column;
     gap: 15px;
     background: var(--card-color);
     padding: 0.8rem;
     border-radius: var(--border-radius-common);
-    min-width: 300px;
+    /* min-width: 300px; */
     box-shadow: var(--card-box-shadow);
+    height: max-content;
+
+    flex-shrink: 0;
+    flex-grow: 0;
 }
 
-.about-code_ability-cont{
+.code-skills{
     justify-content: space-around;
+}
+
+.about-language_cont{
+ width: fit-content;
 }
 
 
 .about-general-language-cont{
     display: flex;
     flex-direction: column;
-    height: 300px;
+    
     gap: 10px;
 }
 
 
-.about-code_ability-cont-span, .circle-span{
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);   
+.skills-span{
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    text-align: center;   
 }
 
 
 
-.about-code_ability-cont_bars{
+.code-skills_bars{
     display: flex;
     gap: 10px;
     flex-direction: column;
@@ -96,6 +95,36 @@
     margin-top: 4px;
     position: relative;
 }
+
+
+
+.contact_card-cont{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+.contact-card{
+    display: flex;
+    gap: 15px;
+}
+
+.contact-icon_cont{
+    border-radius: var(--border-radius-common);
+    box-shadow: var(--card-box-shadow);
+    width: fit-content;
+    padding: 3px;
+    
+}
+
+.contact-icon{
+    height: 40px;
+    width: 40px;
+    
+}
+
+
 
 
 /*------------------------ bar of language of programation ------------------------*/
@@ -130,35 +159,15 @@
 }
 
 
-/* ---------------------------- language container -----------------------------*/
-
-.about-language_cont{
-    /* his basic style is with the .about-code_ability-cont littel more top */
-    height: min-content;
-    
-}
 
 
-.span-cont{   /*----------------- span with shadows -----------------*/
-    width: 100%;
-    text-align: center;
-}
 
 .span-cont_span{ /*----------------- span with shadows -----------------*/
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
 }
 
 
-.about-language_circles-cont{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    
-}
+
 
 .language_circles{
     /*this is the div wich contain the svg*/
@@ -182,7 +191,7 @@
     /* is the svg */
     --size: 250px;
     --half-size: calc(var(--size) / 2);
-    --stroke-width: 27px;
+    --stroke-width: 20px;
     --radius: calc((var(--size) - var(--stroke-width)) / 2);
     --circumference: calc(var(--radius) * pi * 2);
     --dash: calc((var(--progress) * var(--circumference)) / 100);
@@ -195,6 +204,7 @@
     stroke-width: var(--stroke-width);
     fill: none;
     stroke-linecap: round;
+    scale: 0.9;
 }
     
 .circular-progress circle.fg {
@@ -243,9 +253,7 @@
 
   /* ------------------------------- language description -------------------------------- */
 
-  .language-description{
-
-  }
+ 
 
   .language-description-text{
     width: 300px;
@@ -255,33 +263,4 @@
 
   /*------------------------------- Extra info container -------------------------------*/
 
-  .about_contact-info{
-    height: max-content;
-  }
-
-.contact_card-cont{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    
-}
-
-.contact-cards{
-    display: flex;
-    gap: 15px;
-}
-
-.contact-icon_cont{
-    border-radius: var(--border-radius-common);
-    box-shadow: var(--card-box-shadow);
-    width: fit-content;
-    padding: 3px;
-    
-}
-
-.contact-icon{
-    height: 40px;
-    width: 40px;
-    
-}
-
+ 

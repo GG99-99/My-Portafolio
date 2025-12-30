@@ -15,13 +15,15 @@
 <body>
     <div id="top-init"></div>
 
-    <div class="scroll-guide_grand-father-cont">
+    <div class="scroll-guide-region">
         <div class="scroll-guide-cont">
-                <a  href="#top-init" class="scroll-guide-cont__scroll-guide"><div class="scroll-guide-cont__scroll-guide__circle"></div></a>
+                <a  href="#top-init" class="a_of_circle"><div class="circle"></div></a>
 
-                <a  href="#about" class="scroll-guide-cont__scroll-guide"><div class="scroll-guide-cont__scroll-guide__circle"></div></a>
+                <a  href="#about" class="a_of_circle"><div class="circle"></div></a>
 
-                <a href="#educacion" class="scroll-guide-cont__scroll-guide"><div class="scroll-guide-cont__scroll-guide__circle"></div></a>
+                <a href="#educacion" class="a_of_circle"><div class="circle"></div></a>
+
+                <a href="#proyectos" class="a_of_circle"><div class="circle"></div></a>
                        
         </div>
     </div>
@@ -36,14 +38,25 @@
                     <h1 class="navbar__hero-container__h1-cont__h1">¡BIENVENIDO A MI PORTAFOLIO!</h1>                   
                 </div>
                 <div class="navbar__hero-container__p-cont">
-                    <p class="navbar__hero-container__p-cont__p">Hey, Soy Jeremy espero que te agrade mi portafolio</p>
+                    <p class="navbar__hero-container__p-cont__p">Hey, Soy Jeremy Garcia y espero que te agrade mi portafolio</p>
                 </div>
             </div>
 
             <div class="navbar__ul-container">
                 <ul class="navbar__ul-container__ul">
-                    <li class="navbar__ul-container__ul__li"><span class="navbar__ul-container__ul__li__span-line"></span> <a href="#about">Sobre Mi</a></li>
-                    <li class="navbar__ul-container__ul__li"><span class="navbar__ul-container__ul__li__span-line"></span> <a href="#educacion">Educación</a></li>
+                    <li class="navbar__ul-container__ul__li">
+                        <span class="navbar__ul-container__ul__li__span-line"></span> 
+                        <a href="#about">Sobre Mi</a>
+                    </li>
+                    <li class="navbar__ul-container__ul__li">
+                        <span class="navbar__ul-container__ul__li__span-line"></span> 
+                        <a href="#educacion">Educación</a>
+                    </li>
+
+                    <li class="navbar__ul-container__ul__li">
+                        <span class="navbar__ul-container__ul__li__span-line"></span> 
+                        <a href="#proyectos">Proyectos</a>
+                    </li>
                 </ul>
             </div>
 
@@ -55,34 +68,32 @@
 {% block content %}
     <section class="about" id="about">
 
-         <article class="about-cont">
+         <article class="about">
 
-            <div class="h3-cont"  >
+            <div class="h3_cont">
 
-                <img src="{{url_for('static', filename='icons/contact-icon.svg')}}" alt="" class="h3-cont__icon" id="h3-icon-contact">  
+                <img src="{{url_for('static', filename='icons/contact-icon.svg')}}" alt="" class="h3_icon" id="h3-icon-contact">  
                 
                 
-                <h3 class="h3-cont__h3"> SOBRE MI</h3>
+                <h3 class="h3"> SOBRE MI</h3>
 
             </div>
 
-            <div class="about-cont-grid_cont">
-                <div class="about-text_container">
-                    <div class="about-text-sub_container">
-                        <p class="about-text">Soy Jeremy Rafael, naci en Republica Dominicana, Actualmente estoy estudiando la carrera de ingenieria en Software en la Universidad Intec. tengo conocimientos de lenguajes de programacion como JavaScript y Python, ademas de HTML y CSS.</p>
-                    </div>
-    
+            <div class="about_cont">
+                <div class="large-card">                   
+                        <p>Soy Jeremy Rafael, oriundo de Republica Dominicana, Actualmente estoy estudiando la carrera de ingenieria en Software en la Universidad Intec. tengo conocimientos de lenguajes de programacion como JavaScript y Python, ademas de HTML y CSS.</p>
+                    
                 </div>
 
                 <div class="about-abilitys_cont">
-                    <div class="about-code_ability-cont">
+                    <div class="code-skills">
 
 
-                        <div class="about-code_ability-cont-span">
-                            <span class="about-code_ability-cont-span_span">Lenguajes de programacion</span>
+                        <div class="skills-span">
+                            <span>Lenguajes de programacion</span>
                         </div>
 
-                        <div class="about-code_ability-cont_bars">
+                        <div class="code-skills_bars">
 
                             <div class="sub-cont_bars">
                                 <span>JavaScript</span>
@@ -116,80 +127,81 @@
                     </div>
 
 
-                    <div class="about-general-language-cont">
-                        <div class="about-language_cont">
-                            <div class="span-cont">
-                                <span class="span-cont_span">Idiomas</span>
-                            </div>
-                            <div class="about-language_circles-cont">
-                                <div class="language_circles ">
-                                    <svg width="120" height="120" viewBox="0 0 250 250" class="circular-progress spanish-circle">
-                                        <circle class="fg spanish-fg"></circle>
-                                    </svg>
-    
-                                    <span class="circle-span">Español<br>100%</span>
-                                </div>
-    
-    
-                                <div class="language_circles ">
-                                    <svg width="120" height="120" viewBox="0 0 250 250" class="circular-progress english-circle">
-                                        <circle class="fg inglish-fg"></circle>
-                                    </svg>
-    
-                                    <span class="circle-span">Ingles<br>55%</span>
-                                </div>
-    
-                            </div>
+                    
+                    <div class="about-language_cont">
+                        <div class="skills-span">
+                            <span >Idiomas</span>
                         </div>
+                        <div class="circles-cont">
+                            <div class="language_circles ">
+                                <svg width="120" height="120" viewBox="0 0 250 250" class="circular-progress spanish-circle">
+                                    <circle class="fg spanish-fg"></circle>
+                                </svg>
 
-                        <div class="language-description">
-                            <div class="span-cont">
-                                <span class="span-cont_span">Dato</span>
+                                <span class="circle-span skills-span">Español<br>100%</span>
                             </div>
 
-                            <div class="language-description_text">
-                                <p class="description-text">Estudie en un instituto de ingles por un año, lo deje y segui estudiando ingles por mi propia cuenta</p>
+
+                            <div class="language_circles ">
+                                <svg width="120" height="120" viewBox="0 0 250 250" class="circular-progress english-circle">
+                                    <circle class="fg inglish-fg"></circle>
+                                </svg>
+
+                                <span class="circle-span skills-span">Ingles<br>55%</span>
                             </div>
+
                         </div>
                     </div>
+                    
 
-                    <div class="about_contact-info">
-                        <div class="span-cont">
-                            <span class="span-cont_span">Contacto</span>
+                    <div class="contact-box">
+                        <div class="skills-span">
+                            <span >Contacto</span>
                         </div>
 
                         <div class="contact_card-cont">
 
-                            <div class="contact-cards">
+                            <div class="contact-card">
                                 <div class="contact-icon_cont">
                                     <img src="{{url_for('static', filename='icons/phone-icon.svg')}}" alt="" class="contact-icon">
                                 </div>
 
-                                <div class="contact-infos-cont">
-                                    <span class="contact-info"><b>Numero telefonico</b> <br>1 (829) - 903 - 2571</span>
+                                <div class="">
+                                    <span class="contact-info"><b>Numero Telefonico</b> <br>+1 (829) - 903 - 2571</span>
                                 </div>
 
 
                             </div>
 
-                            <div class="contact-cards">
+                            <div class="contact-card">
                                 <div class="contact-icon_cont">
                                     <img src="{{url_for('static', filename='icons/mail-icon.svg')}}" alt="" class="contact-icon">
                                 </div>
 
-                                <div class="contact-infos-cont">
+                                <div class=" ">
                                     <span class="contact-info"><b>Correo Electronico</b> <br>Jeremy0titan@gmail.com</span>
                                 </div>
 
                             </div>
 
-                            <div class="contact-cards">
+                            <div class="contact-card">
                                 <div class="contact-icon_cont">
                                     <img src="{{url_for('static', filename='icons/instagram-icon.svg')}}" alt="" class="contact-icon">
                                 </div>
 
-                                <div class="contact-infos-cont">
-                                    <span class="contact-info"><b>instagram</b> <br>@jrga_101</span>
+                                <div class=" ">
+                                    <span class="contact-info"><b>Instagram</b> <br>@jrga_101</span>
+                                </div>
+                                
+                            </div>
+
+                            <div class="contact-card">
+                                <div class="contact-icon_cont">
+                                    <img src="{{url_for('static', filename='icons/github-grueso.svg')}}" alt="" class="contact-icon">
+                                </div>
+
+                                <div class=" ">
+                                    <span class="contact-info"><b>Github</b> <br>GG99-99</span>
                                 </div>
                                 
                             </div>
@@ -198,6 +210,7 @@
                     
                 </div>
 
+                <!-- <div class="large-card"></div> -->
             </div>
             
 
@@ -205,83 +218,458 @@
 
     </section>
 
-    <section class="educacion" id="educacion">
-        <article class="edu-cont">
-        <div class="h3-cont" >
+    <section id="educacion">
+        <article class="section_article">
+            <div class="h3_cont" >
 
-            <img src="{{url_for('static', filename='icons/study-icon.svg')}}" alt="" class="h3-cont__icon">
-            <h3 class="h3-cont__h3"> EDUCACIÓN</h3>
-
-        </div>
-
-        <div class="edu-cont__card-cont">
-            <div class="edu-cont__card-cont__card">
-                <h3 class="edu-cont__card-cont__card__h3">Universidad Intec</h3>
-
-                <div class="edu-cont__card-cont__card__span-cont">
-                    <span>Ingeniero en Software</span>
-                    <span>2024 - 2027 </span>
-
-                </div>
+                <img src="{{url_for('static', filename='icons/study-icon.svg')}}" alt="" class="h3_icon">
+                <h3 class="h3"> EDUCACIÓN</h3>
 
             </div>
 
-            <div class="edu-cont__card-cont__card">
-                <h3 class="edu-cont__card-cont__card__h3">ITLA</h3>
+            <div class="cards">
 
-                <div class="edu-cont__card-cont__card__span-cont">
-                    <span>Cisco CCNA 1</span>
-                    <span>2024</span>
+                <div class="card">
+                    <h3 class="shw_txt center">Universidad Intec</h3>
 
-                </div>
-            </div>
+                    <div class="shw_txt">
+                        <span>Ingeniero en Software</span>
+                        <span>2024 - 2027 </span>
 
-            <div class="edu-cont__card-cont__card">
-                <h3 class="edu-cont__card-cont__card__h3">ITLA</h3>
-
-                <div class="edu-cont__card-cont__card__span-cont">
-                    <span>Cisco CCNA 2</span>
-                    <span>2024</span>
+                    </div>
 
                 </div>
-            </div>
 
-            <div class="edu-cont__card-cont__card">
-                <h3 class="edu-cont__card-cont__card__h3">Infoted</h3>
+                <div class="card">
+                    <h3 class="shw_txt center">ITLA</h3>
 
-                <div class="edu-cont__card-cont__card__span-cont">
-                    <span>Diseño de paginas web (CSS y JavaScript)</span>
-                    <span>2024</span>
+                    <div class="shw_txt">
+                        <span>Cisco CCNA 1</span>
+                        <span>2024</span>
 
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="shw_txt center">ITLA</h3>
+
+                    <div class="shw_txt">
+                        <span>Cisco CCNA 2</span>
+                        <span>2024</span>
+
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3 class="shw_txt center">Infoted</h3>
+
+                    <div class="shw_txt">
+                        <span>Diseño de paginas web (CSS y JavaScript)</span>
+                        <span>2024</span>
+
+                    </div>
+                    
+                </div>
+
+                <div class="card">
+                    <h3 class="shw_txt center">Colegio evangelico <br> Sinai</h3>
+
+                    <div class="shw_txt">
+                        <span>Graduado de Bachiller</span>
+                        <span>2023</span>
+
+                    </div>
+                    
                 </div>
                 
             </div>
-
-
-
-            <div class="edu-cont__card-cont__card">
-                <h3 class="edu-cont__card-cont__card__h3">Colegio evangelico <br> Sinai</h3>
-
-                <div class="edu-cont__card-cont__card__span-cont">
-                    <span>Graduado de Bachiller</span>
-                    <span>2023</span>
-
-                </div>
-                
-            </div>
-        </div>
 
 
             
-        </div>
+        
         </article>
     </section>
+
+
+    <section id="proyectos">
+
+        <article class="section_article">
+            <div class="h3_cont" >
+
+                <img src="{{url_for('static', filename='icons/idea.svg')}}" alt="" class="h3_icon">
+                <h3 class="h3"> proyectos</h3>
+
+            </div>
+
+            <div class="cards">
+                <div class="card ofProject" data-screen="appturnos">
+                    <div class="projectIconCont">
+                        <img src="{{url_for('static', filename='icons/ticket.svg')}}" alt="" class="projectIcon">
+                    </div>
+                    <div class="shw_txt">App Web de Turnos</div>
+                </div>
+
+                <div class="card ofProject" data-screen="chatgrupal">
+                    <div class="projectIconCont">
+                        <img src="{{url_for('static', filename='icons/msg.svg')}}" alt="" class="projectIcon">
+                    </div>
+                    <div class="shw_txt">Chat Web Grupal</div>
+                </div>
+
+            </div>
+
+        </article>
+
+    </section>
+
+
+    <div class="screen " data-screen="appturnos">
+        <div class="icons-box">
+            <div class="icon-box">
+                <a href="https://github.com/GG99-99/vauqeroweb.git" target="_blank" rel="noopener noreferrer">
+                    <img src="{{url_for('static', filename='icons/github.svg')}}" alt="" class="h3_icon ">
+                </a>
+            </div>
+
+            <div class="icon-box r out" data-screen="appturnos">
+                
+                    <img src="{{url_for('static', filename='icons/x.svg')}}" alt="" class="h3_icon ">
+                
+            </div>
+
+        </div>
+        
+
+        <div class="sub_screen">
+            <div class="gallery " >
+                <div class="imgCont">
+                    <img src="{{url_for('static', filename='img/turnos/home.png')}}" alt="">
+                    <div class="screenCard">
+                        <div class="shw_txt" >Vista para Clientes</div>
+
+                        Esta es la vista de los clientes , donde pueden visualizar su nombre,
+                        turno asignado, el estado de su turno y el estado de la silla en la cual 
+                        esperan.
+
+                    </div>
+                </div>
+
+                <div class="imgCont">
+                    <img src="{{url_for('static', filename='img/turnos/info.png')}}" alt="">
+                    <div class="screenCard">
+                        <div class="shw_txt" >Seccion de Informacion</div>
+                        Esta es un seccion de informacion  en la misma vista de los clientes, 
+                        donde se brindan datos de locaclizacion y contacto del negocio.
+                    </div>
+                </div>
+
+                <div class="imgCont">
+                    <img src="{{url_for('static', filename='img/turnos/panel.png')}}" alt="">
+                    <div class="screenCard">
+                        <div class="shw_txt" >Panel de Administracion</div>
+
+                        Esta es la vista del panel administrador . Es donde el encargado de gestionar los 
+                        turnos realizan los eventos que alteran la lista de espera.
+                    </div>
+                </div>
+
+                <div class="imgCont">
+                    <img src="{{url_for('static', filename='img/turnos/login.png')}}" alt="">
+                    <div class="screenCard">
+                        <div class="shw_txt" >Inicio de Sesion</div>
+
+                        Esta es la vista de iniciar sesion (login), para el encargado de gestionar
+                        los turnos. Cuenta con dos simples campos, nombre de usuario y contrasena.
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="description">
+
+                <div class="large-card">
+                    <div class="shw_txt" >Descripcion</div>
+                    <p>Este proyecto de turnos se realizo con un efoque sencillo y minimalista para ayudar a peluqueros locales que tienen la intencion de profesionalizar el manejo de sus clientes, sin embargo este sistema se puede adaptar y extrapolar a muchos otros tipos de negocios donde el manego de turnos es clave para un sentimiento de conformidad y profesionalismo en los clientes</p>
+                </div>
+
+                <div class="h3_cont tecH3" >
+
+                    <img src="{{url_for('static', filename='icons/tool.svg')}}" alt="" class="h3_icon tecIcon" down="t">
+                    <h3 class="h3"> Video Demostracion</h3>
+
+                </div>
+
+                <div class="video-cont">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Y4ByyvBEXa0?si=3a4eAy8EsojZhzZD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                </div>
+
+                <div class="h3_cont tecH3" >
+
+                    <img src="{{url_for('static', filename='icons/tool.svg')}}" alt="" class="h3_icon tecIcon" down="t">
+                    <h3 class="h3"> Tecnologias</h3>
+
+                </div>
+
+                <div class="cards">
+                    <div class="screenCard tec">
+                        <div class="shw_txt" >Node js</div>
+                        <a href="https://nodejs.org/en" target="_blank" rel="noopener noreferrer">
+                            <img src="{{url_for('static', filename='icons/link.svg')}}" alt="" class="h3_icon tecIcon">
+                        </a>
+                    </div>
+
+                    <div class="screenCard tec">
+                        <div class="shw_txt" >Express</div>
+                        <a href="https://expressjs.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="{{url_for('static', filename='icons/link.svg')}}" alt="" class="h3_icon tecIcon">
+                        </a>
+                    </div>
+
+                    <div class="screenCard tec">
+                        <div class="shw_txt" >Pug</div>
+                        <a href="https://pugjs.org/api/getting-started.html" target="_blank" rel="noopener noreferrer">
+                            <img src="{{url_for('static', filename='icons/link.svg')}}" alt="" class="h3_icon tecIcon">
+                        </a>
+                    </div>
+
+                    <div class="screenCard tec">
+                        <div class="shw_txt" >Socket.io</div>
+                        <a href="https://socket.io/" target="_blank" rel="noopener noreferrer">
+                            <img src="{{url_for('static', filename='icons/link.svg')}}" alt="" class="h3_icon tecIcon">
+                        </a>
+                    </div>
+
+                    <div class="screenCard tec">
+                        <div class="shw_txt" >Json web tokens</div>
+                        <a href="https://www.jwt.io/" target="_blank" rel="noopener noreferrer">
+                            <img src="{{url_for('static', filename='icons/link.svg')}}" alt="" class="h3_icon tecIcon">
+                        </a>
+                    </div>
+
+                    <div class="screenCard tec">
+                        <div class="shw_txt" >db-local</div>
+                        <a href="https://www.npmjs.com/package/db-local" target="_blank" rel="noopener noreferrer">
+                            <img src="{{url_for('static', filename='icons/link.svg')}}" alt="" class="h3_icon tecIcon">
+                        </a>
+                    </div>
+
+                    
+                    
+                </div>
+
+                <div class="h3_cont tecH3" >
+
+                    <img src="{{url_for('static', filename='icons/tool.svg')}}" alt="" class="h3_icon tecIcon" down="t">
+                    <h3 class="h3"> Detalles Tecnicos</h3>
+
+                </div>
+
+                <div class="cards">
+                    <div class="screenCard tec colm">
+                        <div class="shw_txt" >Socket.io</div>
+                        Fue implementado para realizar cambios en tiempo real en la vista de clientes segun se generen desde el panel administrativo.
+                        <br>
+                        <br>
+                        Eventos:
+                        <br>
+                        <br>
+                        - Subir/Bajar Turno <br> - De/Des declinar Turno <br> - Abrir/Cerrar Silla <br> - Agregar Cliente 
+                    </div>
+
+                    <div class="screenCard tec colm">
+                        <div class="shw_txt" >Json web tokens</div>
+                        Se utilizo para manejar y autorizar las sesiones de los administradores en el panel, tambien se ultizo como capa de seguridad para proteger quienes y desde donde se generan los eventos de socket.io.
+                    </div>
+
+                    <div class="screenCard tec colm">
+                        <div class="shw_txt" >db-local</div>
+                    Es la dependencia que se utilizo para el almazenaje de la informacion de los clientes y usuarios.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="screen" data-screen="chatgrupal">
+        <div class="icons-box">
+            <div class="icon-box">
+                <a href="https://github.com/GG99-99/chatGrupal.git" target="_blank" rel="noopener noreferrer">
+                    <img src="{{url_for('static', filename='icons/github.svg')}}" alt="" class="h3_icon ">
+                </a>
+            </div>
+
+            <div class="icon-box r out" data-screen="chatgrupal">
+                
+                    <img src="{{url_for('static', filename='icons/x.svg')}}" alt="" class="h3_icon ">
+                
+            </div>
+
+        </div>
+
+        <div class="sub_screen">
+            <div class="gallery " >
+                <div class="imgCont">
+                    <img src="{{url_for('static', filename='img/chatgroup/normal.png')}}" alt="">
+                    <div class="screenCard">
+                        <div class="shw_txt" >Vista General</div>
+
+                        Este es el apartado principal de la web, en el centro estan los mensajes que han sido agregados 
+                        y en el lateral derecho las acciones que se pueden realizar
+
+                    </div>
+                </div>
+
+                <div class="imgCont">
+                    <img src="{{url_for('static', filename='img/chatgroup/insert.png')}}" alt="">
+                    <div class="screenCard">
+                        <div class="shw_txt" >Formulario Crear Mensaje</div>
+                        Este overlay es la seccion donde el usuario ingresa la informacion para crear un Mensaje
+                    </div>
+                </div>
+
+                <div class="imgCont">
+                    <img src="{{url_for('static', filename='img/chatgroup/ses.png')}}" alt="">
+                    <div class="screenCard">
+                        <div class="shw_txt" >Formulario para cambiar sesion</div>
+                        Este overlay es la seccion donde el usuario ingresa la sesion de mensajes a la que quiere ir.
+                        El funcionamiento de las sesiones sera explicado en la Descripcion
+                        
+                    </div>
+                </div>
+
+                <div class="imgCont">
+                    <img src="{{url_for('static', filename='img/chatgroup/selection.png')}}" alt="">
+                    <div class="screenCard">
+                        <div class="shw_txt" >Vista de seleccion</div>
+
+                        Esta es la vista en el que podemos seleccionar los mensajes que seran destinados ha deshabilitarse ("elminarse"), para finalizar el proceso se solicitara una master-key
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="description">
+
+                <div class="large-card" id="chat-large-card">
+                    <div class="shw_txt shw-description">Concepto General</div>
+                    <p>Este proyecto de mensajes, se realizo con el proposito de ayudar al club de poesia universitario del Intec, para realizar actividades colaboratibas que involucran la creacion y transmicion de poemas individuales.</p>
+                    <div class="shw_txt shw-description">Master-Key</div>
+                     <p>La master-key es una especie de contrasena que solo conoce el lider del grupo, la cual permite ejecutar el evento de Deshabilitar un mensaje. El evento Deshabilitar ocurre de manera general con el io.emit  de socket.io</p>
+                     <div class="shw_txt shw-description">Sesiones</div>
+                     <p>Las sesiones son una funcionalidad que permite tener una especie de espacios de trabajo con distintos mensajes en el mismo dia. Solo se pueden visualizar los mensajes que sean del dia en curso y en la session que se encuentre en cliente. Las sesiones se manejan como eventos io individuales es decir de socket.emit de socket.io </p>
+
+
+
+                </div>
+
+                <div class="h3_cont tecH3" >
+
+                    <img src="{{url_for('static', filename='icons/tool.svg')}}" alt="" class="h3_icon tecIcon" down="t">
+                    <h3 class="h3"> Video Demostracion</h3>
+
+                </div>
+
+                <div class="video-cont">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/bXTeNFNg0Bk?si=mZ8YWCl5oK-jqtmO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                </div>
+
+                <div class="h3_cont tecH3" >
+
+                    <img src="{{url_for('static', filename='icons/tool.svg')}}" alt="" class="h3_icon tecIcon" down="t">
+                    <h3 class="h3"> Tecnologias</h3>
+
+                </div>
+
+                <div class="cards">
+                    <div class="screenCard tec">
+                        <div class="shw_txt" >Node js</div>
+                        <a href="https://nodejs.org/en" target="_blank" rel="noopener noreferrer">
+                            <img src="{{url_for('static', filename='icons/link.svg')}}" alt="" class="h3_icon tecIcon">
+                        </a>
+                    </div>
+
+                    <div class="screenCard tec">
+                        <div class="shw_txt" >Express</div>
+                        <a href="https://expressjs.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="{{url_for('static', filename='icons/link.svg')}}" alt="" class="h3_icon tecIcon">
+                        </a>
+                    </div>
+
+                    <div class="screenCard tec">
+                        <div class="shw_txt" >Pug</div>
+                        <a href="https://pugjs.org/api/getting-started.html" target="_blank" rel="noopener noreferrer">
+                            <img src="{{url_for('static', filename='icons/link.svg')}}" alt="" class="h3_icon tecIcon">
+                        </a>
+                    </div>
+
+                    <div class="screenCard tec">
+                        <div class="shw_txt" >Socket.io</div>
+                        <a href="https://socket.io/" target="_blank" rel="noopener noreferrer">
+                            <img src="{{url_for('static', filename='icons/link.svg')}}" alt="" class="h3_icon tecIcon">
+                        </a>
+                    </div>
+
+                    
+
+                    <div class="screenCard tec">
+                        <div class="shw_txt" >better-sqlite3</div>
+                        <a href="https://www.npmjs.com/package/better-sqlite3" target="_blank" rel="noopener noreferrer">
+                            <img src="{{url_for('static', filename='icons/link.svg')}}" alt="" class="h3_icon tecIcon">
+                        </a>
+                    </div>
+
+                    
+                    
+                </div>
+
+                <div class="h3_cont tecH3" >
+
+                    <img src="{{url_for('static', filename='icons/tool.svg')}}" alt="" class="h3_icon tecIcon" down="t">
+                    <h3 class="h3"> Detalles Tecnicos</h3>
+
+                </div>
+
+                <div class="cards">
+                    <div class="screenCard tec colm">
+                        <div class="shw_txt" >Socket.io</div>
+                        Fue implementado para realizar cambios en tiempo real en segun los eventos indicados
+                        <br>
+                        <br>
+                        Eventos:
+                        <br>
+                        <br>
+                        - Crear/ Deshabilitar Mensajes <br> - Subir/Bajar Sesión 
+                    </div>
+
+
+                    <div class="screenCard tec colm">
+                        <div class="shw_txt" >better-sqlite3</div>
+                    Se utilizo esta base de datos debido a su facil usabilidad y rapidez para realizar operaciones sincronas.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
     
+    <div class="screen" data-screen="img"></div>
 
 {% endblock %}
 
    
 </body>
-<script src="{{url_for('static', filename='js/main.js')}}"></script>
-<script src="{{url_for('static', filename='js/scroll-guide.js')}}"></script>
+<!-- <script src="{{url_for('static', filename='js/main.js')}} type="module""></script> -->
+<script src="{{url_for('static', filename='js/scroll-guide.js')}}" type="module"></script>
+<script src="{{url_for('static', filename='js/screens.js')}}" type="module"></script>
+<script src="{{url_for('static', filename='js/screenImg.js')}}" type="module"></script>
+
+
 </html>

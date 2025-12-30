@@ -1,41 +1,41 @@
 
-const scrollGuideCont = document.querySelector(".scroll-guide_grand-father-cont");
+const scrollGuideCont = document.querySelector(".scroll-guide-region");
 
-const scrollGuide = document.querySelectorAll(".scroll-guide-cont__scroll-guide__circle");
+const scrollGuides = document.querySelectorAll(".circle");
 
 const header = document.querySelector("header");
-const aboutCont = document.querySelector(".about-cont")
-const article1 = document.querySelector(".edu-cont");
+const aboutCont = document.querySelector(".about")
+const article1 = document.querySelector(".section_article");
+const article2 = document.querySelector("#proyectos");
+
+
+scrollGuides[0].classList.add("scale1")
+
+// let i;
 
 
 
-scrollGuide[0].classList.add("scale1")
+function CircleScale(actualCircleNum){  
+    // agrega escala al circulo indicada y limpia a los demas
 
-let i;
+    for (let i = 0; i < scrollGuides.length; i++){
+        if (i != actualCircleNum){
+            scrollGuides[i].classList.remove("scale1");
+        }
 
-function circleAndScale(i, list){
-    for (let id in list){
-        if (id == i){
-            list[id].classList.add("scale1");
-            return
+        if(i == actualCircleNum){
+            scrollGuides[i].classList.add("scale1");
         }
     }
-}
-
-function removeCircleScale(e1, e2, list){
-    list[e1].classList.remove("scale1");
-    
-
-    list[e2].classList.remove("scale1");
     
 }
 
 var lastScrollTop = window.scrollY /* that var is for hide de scroll guide */
 
-function hideScrollGuide(lst, cont) {
+function hideScrollGuide(cont) {
     let scrollFromTop = window.scrollY 
 
-    if (scrollFromTop > lst ){
+    if (scrollFromTop > lastScrollTop ){
         cont.style.top = "-100px"     
     } 
     
@@ -46,49 +46,50 @@ function hideScrollGuide(lst, cont) {
     lastScrollTop = scrollFromTop
 }
 
-
-window.addEventListener('scroll', 
-function () {    // esta es la funcion que toma los top del header, article ...
+function mngScrollGuide() {    // esta es la funcion que toma los top del header, article ...
 
    
 
     let headerTop = header.getBoundingClientRect().top;
     let aboutContTop = aboutCont.getBoundingClientRect().top;
     let article1Top = article1.getBoundingClientRect().top;
+    let article2Top = article2.getBoundingClientRect().top;
+
     let windowHeight = window.innerHeight / 3
     
     
-    /* --- circle 1  --- */
+    /* --- circle 0  --- */
     if (headerTop  < windowHeight){
-        circleAndScale(0, scrollGuide)
-        removeCircleScale(1,2,scrollGuide)
+        CircleScale(0)
     }
-    /* --- circle 1  end --- */
+    
 
 
-    /* --- circle 2 --- */
+    /* --- circle 1 --- */
 
     if (aboutContTop < windowHeight){
-        circleAndScale(1, scrollGuide)
-        removeCircleScale(0,2,scrollGuide)
+        CircleScale(1)
     }
-    /* --- circle 2  end --- */
+    
 
 
     /* --- circle 3 --- */
     if (article1Top < windowHeight){
-        circleAndScale(2, scrollGuide)
-        removeCircleScale(0,1,scrollGuide)
-        
-
-    
+        CircleScale(2)
     }
     
-    hideScrollGuide(lastScrollTop, scrollGuideCont);
+
+    /* --- circle 4 --- */
+    if (article2Top < windowHeight){
+        CircleScale(3)
+    }
+
+    
+    hideScrollGuide(scrollGuideCont);
 
 }
 
-);
+window.addEventListener('scroll', mngScrollGuide);
 
 
 

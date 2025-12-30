@@ -1,10 +1,10 @@
-.scroll-guide_grand-father-cont{
+.scroll-guide-region{
     width: 100vw;
     position: fixed;
     display: flex;
     justify-content: center;
     margin-top: 15px;
-    z-index: 5000;
+    z-index: 1000;
     top: 0;
     transition: top 0.4s ease;
 }
@@ -23,7 +23,7 @@
 }
 
 
-.scroll-guide-cont__scroll-guide{
+.a_of_circle{
     height: 35px;
     width: 35px;
     border-radius: 50%;
@@ -36,7 +36,7 @@
 }
 
 
-.scroll-guide-cont__scroll-guide__circle{
+.circle{
     height: 20px;
     width: 20px;
     border: solid #ffffff70 3px;
@@ -49,6 +49,7 @@
     transition: transform 0.5s;
 }
 
-.about, .educacion{
-    scroll-margin-top: 9ex;
+section{
+    scroll-margin-top: 9vh;
+    margin-bottom: 8vh;
 }
