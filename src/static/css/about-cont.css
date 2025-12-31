@@ -29,7 +29,7 @@
 /* --------------------------------- Ability container --------------------------------- */
 
 
-.about-abilitys_cont{
+.skills-cont{
      /*general ability container, this is the cont that have assigned the area B*/
     
     display: flex;
@@ -40,11 +40,10 @@
     justify-content: center;
 }
 
-.code-skills, .about-language_cont, .language-description, .contact-box{  
+.code-skills, .language-skills, .language-description, .contact-box{  
     display: flex;
     flex-direction: column;
     gap: 15px;
-    background: var(--card-color);
     padding: 0.8rem;
     border-radius: var(--border-radius-common);
     /* min-width: 300px; */
@@ -59,7 +58,7 @@
     justify-content: space-around;
 }
 
-.about-language_cont{
+.language-skills{
  width: fit-content;
 }
 
@@ -261,6 +260,95 @@
   }
 
 
-  /*------------------------------- Extra info container -------------------------------*/
+
+
+  /*------------------------------- Personal tates container -------------------------------*/
+
+ #personal-tates{
+    border-radius: 0;
+    background-color: rgb(15 15 15);
+    box-shadow: none;
+    cursor: pointer;
+    padding: 1.2vh;
+
+    
+
+   display: grid;
+   grid-template-rows: 2vh 0fr;
+   transition: grid-template-rows 0.5s ease;
+
+ }
+
+#personal-tates.expand{
+    grid-template-rows: 2vh 1fr;
+ }
+
+#personal-tates.expand .cards{
+    margin-top: 2.5vh;
+    margin-bottom: 2vh;
+}
+
+ #ttl-pt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+ }
+
+ #ttl-pt img{
+    height: 2vh;
+    position: absolute;
+    left: 1vh;
+
+    transition: transform 0.5s ease;
+ }
+
+ .rotate{
+    transform: rotate(90deg);
+ }
+
+ 
+.tates.cards{
+
+    width: 100%;
+    justify-content: center;
+    gap: 5vh;
+    overflow: hidden;
+    transition: margin 0.5s ease;
+ }
+
+
+
+
+
+
+
+ .img-cont-pt{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+
+    gap: 1.2vh;
+    flex-grow: 0;
+    flex-shrink: 0;
+ }
+
+ .sub-img-cont{
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-cont-pt img{
+    height: 10vh;
+ }
+
+.sub-img-cont img{
+    height: 90%;
+}
+ 
 
  

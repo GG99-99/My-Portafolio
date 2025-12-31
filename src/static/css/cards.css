@@ -20,7 +20,6 @@
 
 .card{  /*the display flex is more down with the span-cont*/
     width: 250px;
-    background: var(--card-color);
     border-radius: var(--border-radius-common);
     height: 150px;
     display: flex;
@@ -42,7 +41,6 @@
 .large-card{
     width: 100%;
     height: auto;
-    background-color: var(--card-color);
     border-radius: var(--border-radius-common);
     box-shadow: var(--card-box-shadow);
     padding: 1rem;
