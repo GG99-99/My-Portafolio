@@ -180,7 +180,8 @@
 }
 
 .video-cont iframe{
-     height: clamp(400px, 40vh, 50vh);
+     height: 350px;
+     width: 350px;
      border-radius: 2vh;
      border: none;
      overflow: hidden;
