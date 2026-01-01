@@ -9,7 +9,7 @@
      z-index: 2000;
      overflow-y: auto;
 
-     background: rgba(255, 255, 255, 0.8);
+     background: rgba(25, 25, 25, 0.8);
      -webkit-backdrop-filter: blur(20px);
      backdrop-filter: blur(20px);
     
@@ -17,6 +17,14 @@
 
      flex-direction: column;
      
+}
+
+@supports (backdrop-filter: blur(20px)) or (-webkit-backdrop-filter: blur(20px)) {
+  .screen {
+    background: transparent;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+  }
 }
 
 .active{
