@@ -1,6 +1,6 @@
 .about{
     width: 100%;
-    min-height: 98vh;
+    min-height: 75vh;
     display: flex;
     flex-direction: column;
     row-gap: 6vh;

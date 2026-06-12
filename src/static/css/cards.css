@@ -1,21 +1,13 @@
-.section_article{
-    width: 100%;
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    row-gap: 60px;
-    margin-bottom: 20px;
-    
-}
+
 
 
 .cards{
     display: flex;
     justify-content: center;
-    height: minmax(200px);
     flex-wrap: wrap;
     align-content: flex-start;
     gap: 3vh;
+    
 }
 
 .card{  /*the display flex is more down with the span-cont*/

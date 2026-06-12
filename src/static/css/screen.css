@@ -106,8 +106,8 @@
 
 .imgCont img{
      height: 23vh;
-     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-     border-radius: var(--border-radius-common);
+     /*box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+     border-radius: var(--border-radius-common);*/
      transition: scale 0.3s ease;
      cursor: pointer;
 }

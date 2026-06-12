@@ -1,4 +1,18 @@
 
+.section_article{
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+    margin-bottom: 20px;
+    /*justify-content: center;*/
+    align-items: center;
+    
+    
+    
+}
+
 /* ----- h3 container -----*/
 
 
@@ -26,4 +40,8 @@
 
 #educacion .card{
     gap: 2.3vh;
+}
+
+#edu_cards{
+   width: clamp(250px, 850px, 850px); 
 }
